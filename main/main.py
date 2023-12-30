@@ -61,14 +61,17 @@ def main():
                 start_date=input("Enter the Start date: ")
                 end_date=input("Enter the End date: ")
                 temp=NewCARS.getIncidentsInDateRange(start_date,end_date)
+                print("\n(ID, Type, Date, Discription, Status)\n-------------------------------------------------------------------------------------------------------------")
                 for i in temp:
-                    print(temp)
+                    print(i)
 
             elif check==6:
                 Type=(input("Please Enter Incident Type: "))
                 temp=NewCARS.searchIncidents(Type)
+                print("\n(ID, Type, Date, Discription, Status)\n-------------------------------------------------------------------------------------------------------------")
+
                 for i in temp:
-                    print(temp)
+                    print(i)
 
             elif check==7:
                 NewCARS.generateIncidentReport()
@@ -79,8 +82,10 @@ def main():
             elif check==9:
                 ID=input("Enter the Case Id: ")
                 temp=NewCARS.getCaseDetails(caseID=ID)
+                print("\n(ID, Incident_IDS, Discription)\n-----------------------------------------------")
+
                 for i in temp:
-                    print(temp)
+                    print(i)
 
             elif check==10:
                 caseid=int(input("Enter Case Id: "))
@@ -88,8 +93,9 @@ def main():
                 NewCARS.Update_case_details(newdes,caseid)
             elif check==11:
                 temp=(NewCARS.getAllCases())
+                print("\n(ID, Incident_IDS, Discription)\n-----------------------------------------------")
                 for i in temp:
-                    print(temp)
+                    print(i)
             elif check==12:
                 print("Thank You User")
                 break

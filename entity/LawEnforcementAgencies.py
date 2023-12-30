@@ -1,13 +1,13 @@
 class LawEnforcementAgency:
-    def __init__(self,AgencyID,AgencyName,Jurisdiction,contact_information):
-        self._AgencyID=AgencyID
+    def __init__(self,AgencyName,Jurisdiction,contact_information):
+        # self._AgencyID=AgencyID
         self._AgencyName=AgencyName
         self._Jurisdiction=Jurisdiction
         self._contact_information=contact_information
 
-    @property
-    def getAgencyID(self):
-        return self._AgencyID
+    # @property
+    # def getAgencyID(self):
+    #     return self._AgencyID
 
     @property
     def getAgencyName(self):

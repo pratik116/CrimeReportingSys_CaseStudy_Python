@@ -1,8 +1,8 @@
 class Incident:
     prevIncidentId=5
     def __init__(self,IncidentType,IncidentDate,Location,Description,Status,VictimID,SuspectID):
-        self._IncidentID=Incident.prevIncidentId+1
-        Incident.prevIncidentId+=1
+        # self._IncidentID=Incident.prevIncidentId+1
+        # Incident.prevIncidentId+=1
         self._IncidentType=IncidentType
         self._IncidentDate=IncidentDate
         self._Location=Location
@@ -11,9 +11,9 @@ class Incident:
         self._VictimID=VictimID
         self._SuspectID=SuspectID
 
-    @property
-    def getIncidentID(self):
-        return self._IncidentID
+    # @property
+    # def getIncidentID(self):
+    #     return self._IncidentID
 
     @property
     def getIncidentType(self):

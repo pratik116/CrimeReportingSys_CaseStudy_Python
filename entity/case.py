@@ -1,14 +1,14 @@
 class Case:
-    prevCaseId=3
+    # prevCaseId=3
     def __init__(self,caseDes,incidentIDs):
-        self._caseID=Case.prevCaseId+1
-        Case.prevCaseId+=1
+        # self._caseID=Case.prevCaseId+1
+        # Case.prevCaseId+=1
         self._caseDes=caseDes
         self._incidentIDs=incidentIDs
     
-    @property
-    def getcaseID(self):
-        return self._caseID
+    # @property
+    # def getcaseID(self):
+    #     return self._caseID
     
     @property
     def getcaseDes(self):

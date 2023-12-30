@@ -1,8 +1,8 @@
 class Officer:
-    prevOfficerId=5
+    # prevOfficerId=5
     def __init__(self,FirstName,LastName,BadgeNumber,Rank,contact_information,AgencyID):
-        self._OfficerID=Officer.prevOfficerId+1
-        Officer.prevOfficerId+=1
+        # self._OfficerID=Officer.prevOfficerId+1
+        # Officer.prevOfficerId+=1
         self._FirstName=FirstName
         self._LastName=LastName
         self._BadgeNumber=BadgeNumber
@@ -10,9 +10,9 @@ class Officer:
         self._contact_information=contact_information
         self._AgencyID=AgencyID
 
-    @property
-    def getOfficerID(self):
-        return self._OfficerID
+    # @property
+    # def getOfficerID(self):
+    #     return self._OfficerID
 
     @property
     def getFirstName(self):

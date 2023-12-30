@@ -4,5 +4,5 @@ class DBPropertyUtil:
         host='localhost'
         username='root'
         password='JEEjee@116'
-        database='C_A_R_S'
+        database='CARS'
         return username,host,database,password

@@ -8,6 +8,7 @@ class DBConnUtil:
             self.conn=sql.connect(user=connectionString[0],host=connectionString[1],password=connectionString[3],database=connectionString[2])
             self.stmt=self.conn.cursor()
             if self.conn.is_connected:
+                pass
                 print("***Database Connected***")
         except Exception as e:
             print(e)

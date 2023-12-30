@@ -1,17 +1,17 @@
 class Report:
-    prevReportID=5
+    # prevReportID=5
     def __init__(self,IncidentID,ReportingOfficer,ReportDate,ReportDetails,Status='Draft'):
-        self._ReportID=Report.prevReportID+1
-        Report.prevReportID+=1
+        # self._ReportID=Report.prevReportID+1
+        # Report.prevReportID+=1
         self._IncidentID=IncidentID
         self._ReportingOfficer=ReportingOfficer
         self._ReportDate=ReportDate
         self._ReportDetails=ReportDetails
         self._Status=Status
 
-    @property
-    def getReportID(self):
-        return self._ReportID
+    # @property
+    # def getReportID(self):
+    #     return self._ReportID
 
     @property
     def getIncidentID(self):

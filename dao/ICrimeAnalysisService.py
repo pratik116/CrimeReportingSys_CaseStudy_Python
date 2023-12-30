@@ -70,7 +70,7 @@ class ICrimeAnalysisService(DB.DBConnUtil):
     
     def getIncidentsInDateRange(self,startdate,enddate):
         try:
-            select_str=f"select * from Incidents where IncidentDate between '{startdate}' and '{enddate}'"
+            select_str=f'''select IncidentID,IncidentType,date_format(IncidentDate,"%M %d %Y"),Description,Status from Incidents where IncidentDate between '{startdate}' and '{enddate}' '''            
             self.open()
             self.stmt.execute(select_str)
             temp=self.stmt.fetchall()
@@ -83,7 +83,7 @@ class ICrimeAnalysisService(DB.DBConnUtil):
     
     def searchIncidents(self,IncidentType):
         try:
-            select_str=f"select * from Incidents where IncidentType='{IncidentType}'"
+            select_str=f'''select IncidentID,IncidentType,date_format(IncidentDate,"%M %d %Y"),Description,Status from Incidents where IncidentType='{IncidentType}' '''
             self.open()
             self.stmt.execute(select_str)
             temp=self.stmt.fetchall()

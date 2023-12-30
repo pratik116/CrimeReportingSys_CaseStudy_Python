@@ -1,17 +1,17 @@
 class Victim:
-    PrevVictimId=10
+    # PrevVictimId=10
     def __init__(self,FirstName,LastName,DateOfBirth,Gender,contact_information):
-        self._VictimID=Victim.PrevVictimId+1
-        Victim.PrevVictimId+=1
+        # self._VictimID=Victim.PrevVictimId+1
+        # Victim.PrevVictimId+=1
         self._FirstName=FirstName
         self._LastName=LastName
         self._DateOfBirth=DateOfBirth
         self._Gender=Gender
         self._contact_information=contact_information
 
-    @property
-    def getVictimID(self):
-        return self._VictimID
+    # @property
+    # def getVictimID(self):
+    #     return self._VictimID
 
     @property
     def getFirstName(self):

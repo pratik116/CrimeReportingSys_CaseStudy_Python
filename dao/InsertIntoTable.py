@@ -4,9 +4,9 @@ class InsertIntoTable:
     @staticmethod
     def insertVictim(v):
         try:
-            data=[(v.getVictimID,v.getFirstName,v.getLastName,v.getDateOfBirth,v.getGender,v.getcontact_information)]
-            input_str='''INSERT INTO Victims (VictimID,FirstName,LastName,DateOfBirth,Gender,ContactInformation)
-                        VALUES (%s,%s,%s,%s,%s,%s);
+            data=[(v.getFirstName,v.getLastName,v.getDateOfBirth,v.getGender,v.getcontact_information)]
+            input_str='''INSERT INTO Victims (FirstName,LastName,DateOfBirth,Gender,ContactInformation)
+                        VALUES (%s,%s,%s,%s,%s);
                         '''
             insert.open()
             insert.stmt.executemany(input_str,data)
@@ -20,9 +20,9 @@ class InsertIntoTable:
     @staticmethod
     def insertSuspect(s):
         try:
-            data=[(s.getSuspectID,s.getFirstName,s.getLastName,s.getDateOfBirth,s.getGender,s.getcontact_information)]
-            input_str='''INSERT INTO Suspects (SuspectID,FirstName,LastName,DateOfBirth,Gender,ContactInformation)
-                        VALUES (%s,%s,%s,%s,%s,%s);
+            data=[(s.getFirstName,s.getLastName,s.getDateOfBirth,s.getGender,s.getcontact_information)]
+            input_str='''INSERT INTO Suspects (FirstName,LastName,DateOfBirth,Gender,ContactInformation)
+                        VALUES (%s,%s,%s,%s,%s);
                         '''
             insert.open()
             insert.stmt.executemany(input_str,data)
@@ -36,9 +36,9 @@ class InsertIntoTable:
     @staticmethod
     def insertIncident(i):
         try:
-            data=[(i.getIncidentID,i.getIncidentType,i.getIncidentDate,i.getLocation,i.getDescription,i.getStatus,i.getVictimID,i.getSuspectID)]
-            input_str='''INSERT INTO Incidents (IncidentID,IncidentType,IncidentDate,Location,Description,Status,VictimID,SuspectID)
-                        VALUES (%s,%s,%s,%s,%s,%s,%s,%s);
+            data=[(i.getIncidentType,i.getIncidentDate,i.getLocation,i.getDescription,i.getStatus,i.getVictimID,i.getSuspectID)]
+            input_str='''INSERT INTO Incidents (IncidentType,IncidentDate,Location,Description,Status,VictimID,SuspectID)
+                        VALUES (%s,%s,%s,%s,%s,%s,%s);
                         '''
             insert.open()
             insert.stmt.executemany(input_str,data)
@@ -52,9 +52,9 @@ class InsertIntoTable:
     @staticmethod
     def insertReport(r):
         try:
-            data=[(r.getReportID,r.getIncidentID,r.getReportingOfficer,r.getReportDate,r.getReportDetails,r.getStatus)]
-            input_str='''INSERT INTO Reports(ReportID,IncidentID,ReportingOfficer,ReportDate,ReportDetails,Status)
-                        VALUES (%s,%s,%s,%s,%s,%s);
+            data=[(r.getIncidentID,r.getReportingOfficer,r.getReportDate,r.getReportDetails,r.getStatus)]
+            input_str='''INSERT INTO Reports(IncidentID,ReportingOfficer,ReportDate,ReportDetails,Status)
+                        VALUES (%s,%s,%s,%s,%s);
                         '''
             insert.open()
             insert.stmt.executemany(input_str,data)
@@ -68,9 +68,9 @@ class InsertIntoTable:
     @staticmethod
     def insertCase(c):
         try:
-            data=[(c.getcaseID,c.getincidentIDs,c.getcaseDes)]
-            input_str='''INSERT INTO Cases (caseID,IncidentIDs,caseDes)
-                        VALUES (%s,%s,%s);
+            data=[(c.getincidentIDs,c.getcaseDes)]
+            input_str='''INSERT INTO Cases (IncidentIDs,caseDes)
+                        VALUES (%s,%s);
                         '''
             insert.open()
             insert.stmt.executemany(input_str,data)

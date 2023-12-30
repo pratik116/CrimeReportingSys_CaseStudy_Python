@@ -1,8 +1,8 @@
 setup.py
-PW.egg-info/PKG-INFO
-PW.egg-info/SOURCES.txt
-PW.egg-info/dependency_links.txt
-PW.egg-info/top_level.txt
+PW1.egg-info/PKG-INFO
+PW1.egg-info/SOURCES.txt
+PW1.egg-info/dependency_links.txt
+PW1.egg-info/top_level.txt
 dao/CreateTable.py
 dao/ICrimeAnalysisService.py
 dao/InsertIntoTable.py

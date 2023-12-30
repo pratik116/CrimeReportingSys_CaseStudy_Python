@@ -4,8 +4,8 @@ class CreateTable:
     @staticmethod
     def CreateVictim():
         try:
-            create_str='''CREATE TABLE  if not exists Victims(
-            VictimID INT PRIMARY KEY,
+            create_str='''CREATE TABLE if not exists Victims(
+            VictimID INT PRIMARY KEY AUTO_INCREMENT,
             FirstName VARCHAR(255),
             LastName VARCHAR(255),
             DateOfBirth DATE,
@@ -23,7 +23,7 @@ class CreateTable:
     def CreateSuspect():
         try:
             create_str='''CREATE TABLE if not exists Suspects (
-            SuspectID INT PRIMARY KEY,
+            SuspectID INT PRIMARY KEY AUTO_INCREMENT,
             FirstName VARCHAR(255),
             LastName VARCHAR(255),
             DateOfBirth DATE,
@@ -40,8 +40,8 @@ class CreateTable:
     @staticmethod
     def CreateIncident():
         try:
-            create_str='''CREATE TABLE Incidents (
-            IncidentID INT PRIMARY KEY,
+            create_str='''CREATE TABLE if not exists Incidents (
+            IncidentID INT PRIMARY KEY AUTO_INCREMENT,
             IncidentType VARCHAR(255),
             IncidentDate DATE,
             Location VARCHAR(255),
@@ -63,7 +63,7 @@ class CreateTable:
     def CreateLawEnforcementAgencies():
         try:
             create_str='''CREATE TABLE if not exists LawEnforcementAgencies (
-            AgencyID INT PRIMARY KEY,
+            AgencyID INT PRIMARY KEY AUTO_INCREMENT,
             AgencyName VARCHAR(255),
             Jurisdiction VARCHAR(255),
             ContactInformation TEXT
@@ -79,7 +79,7 @@ class CreateTable:
     def CreateOfficer():
         try:
             create_str='''CREATE TABLE if not exists Officers (
-            OfficerID INT PRIMARY KEY,
+            OfficerID INT PRIMARY KEY AUTO_INCREMENT,
             FirstName VARCHAR(255),
             LastName VARCHAR(255),
             BadgeNumber VARCHAR(50),
@@ -99,7 +99,7 @@ class CreateTable:
     def CreateEvidence():
         try:
             create_str='''CREATE TABLE if not exists Evidence (
-            EvidenceID INT PRIMARY KEY,
+            EvidenceID INT PRIMARY KEY AUTO_INCREMENT,
             Description TEXT,
             LocationFound VARCHAR(255),
             IncidentID INT,
@@ -116,7 +116,7 @@ class CreateTable:
     def CreateReports():
         try:
             create_str='''CREATE TABLE if not exists Reports (
-            ReportID INT PRIMARY KEY,
+            ReportID INT PRIMARY KEY AUTO_INCREMENT,
             IncidentID INT,
             ReportingOfficer INT,
             ReportDate DATE,
@@ -136,7 +136,7 @@ class CreateTable:
     def CreateCase():
         try:
             create_str='''CREATE TABLE if not exists Cases (
-            caseID INT PRIMARY KEY,
+            caseID INT PRIMARY KEY AUTO_INCREMENT,
             IncidentIDs varchar(100),
             caseDes varchar(255)
             

@@ -1,17 +1,17 @@
 class Suspect:
-    PrevSuspectId=10
+    # PrevSuspectId=10
     def __init__(self,FirstName,LastName,DateOfBirth,Gender,contact_information):
-        self._SuspectID=Suspect.PrevSuspectId+1
-        Suspect.PrevSuspectId+=1
+        # self._SuspectID=Suspect.PrevSuspectId+1
+        # Suspect.PrevSuspectId+=1
         self._FirstName=FirstName
         self._LastName=LastName
         self._DateOfBirth=DateOfBirth
         self._Gender=Gender
         self._contact_information=contact_information
 
-    @property
-    def getSuspectID(self):
-        return self._SuspectID
+    # @property
+    # def getSuspectID(self):
+    #     return self._SuspectID
 
     @property
     def getFirstName(self):
